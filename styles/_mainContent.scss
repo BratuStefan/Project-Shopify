@@ -1,0 +1,202 @@
+.body_content {
+	margin-top: 81px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	.main_heading {
+		margin-top: 55px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-left: 25%;
+		margin-right: 25%;
+		h2 {
+			transform: scale(0.85);
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-bottom: 25px;
+			font-family: Helvetica, sans-serif;
+			color: $headingColor;
+			font-style: normal;
+			font-weight: bolder;
+			font-size: 40px;
+			line-height: 44px;
+			white-space: nowrap;
+		}
+		p {
+			margin-top: 0;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 25px;
+			line-height: 29px;
+			color: $textColor;
+			text-align: center;
+			white-space: nowrap;
+			span {
+				display: block;
+				width: 100%;
+			}
+		}
+		.form {
+			display: flex;
+			gap: 7px;
+			min-width: 100%;
+			justify-content: center;
+			input {
+				font-size: 1rem;
+				width: 400px;
+				min-width: 400px;
+				padding: 20px;
+				border: 1px solid #c4cdd5;
+				border-radius: 5px;
+				&::placeholder {
+					padding: 20px;
+					color: #454f5b;
+				}
+			}
+			button {
+				display: inline-block;
+				box-sizing: border-box;
+				padding: 15px 25px;
+				min-width: 25px;
+				color: white;
+				text-align: center;
+				font-family: Helvetica, sans-serif;
+				font-weight: 700;
+				line-height: 18px;
+				font-size: 16px;
+				background-color: $buttonColor;
+				border: $buttonColor;
+				border-radius: 6%;
+				border-style: solid;
+				-webkit-font-smoothing: antialiased;
+				transition: 150ms ease;
+				white-space: nowrap;
+				box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+				&:hover {
+					background-color: $buttonHoverColor;
+					border-color: $buttonHoverColor;
+					cursor: pointer;
+				}
+			}
+		}
+		.disclaimer {
+			font-size: 12px;
+			line-height: 18px;
+			margin-top: 13px;
+			white-space: nowrap;
+		}
+	}
+	.main_image {
+		width: 100%;
+		height: 600px;
+		margin-top: 3%;
+		margin-bottom: 4%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.background_image_div {
+			position: relative;
+			img {
+				max-height: 600px;
+				max-width: 100%;
+				min-width: 1200px;
+				display: block;
+				align-self: stretch;
+			}
+			p {
+				position: absolute;
+				bottom: 1%;
+				left: 5%;
+				color: white;
+				font-size: 18px;
+				font-family: Helvetica, sans-serif;
+				line-height: 24px;
+				font-weight: 400;
+				span {
+					text-decoration: underline;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+			.back_forwward_button {
+				display: flex;
+				gap: 25%;
+				position: absolute;
+				bottom: 5%;
+				left: 85%;
+				transform: scale(2);
+				i:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.footer {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		.footer_text {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 15%;
+			h2,
+			h3,
+			p {
+				padding-left: 24%;
+			}
+			h2 {
+				font-weight: 700;
+				font-family: Helvetica, sans-serif;
+				font-size: 36px;
+				line-height: 44px;
+				color: $headingColor;
+				margin-bottom: -0.5%;
+			}
+			h3 {
+				margin-bottom: -0.5%;
+			}
+			h3,
+			p {
+				font-family: Helvetica, sans-serif;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 24px;
+				color: $textColor;
+			}
+			p span {
+				text-decoration: underline;
+				color: $linksColor;
+				cursor: pointer;
+			}
+			button {
+				@include button();
+				width: 40%;
+				margin-left: 24%;
+				white-space: nowrap;
+				&:hover {
+					background-color: $linksColor;
+					border-color: $linksColor;
+					cursor: pointer;
+					color: white;
+				}
+			}
+		}
+		.footer_image {
+			width: 70%;
+			img {
+				display: block;
+				padding-left: 20%;
+				padding-bottom: 5%;
+				width: 600px;
+				max-width: 100%;
+			}
+		}
+	}
+}
